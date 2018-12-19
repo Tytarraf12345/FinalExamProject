@@ -1,15 +1,22 @@
 
 import java.awt.Color;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
 
 /**
  *
  * @author ty tarraf
  */
-public class finalexamproject extends javax.swing.JFrame {
+public class finalexamproject extends javax.swing.JFrame  {
 
     private int level = 1;
     int Score = 0;
     
+    
+     
+
     
 
     /**
@@ -17,7 +24,18 @@ public class finalexamproject extends javax.swing.JFrame {
      */
     public finalexamproject() {
         initComponents();
+        try{
+    File file = new File("Leader.txt");
+    Scanner sc = new Scanner(file);
+    String Leadertxt = sc.nextLine();
+    for(int i = 0; i < 2; i++){
+            Leadertxt +=  "\n"+sc.nextLine() ;
+            }
+     Leader.setText(Leadertxt);
+        } catch (FileNotFoundException e){
+    System.out.println("File not found");
         
+    }
        
     }
 
@@ -48,13 +66,21 @@ public class finalexamproject extends javax.swing.JFrame {
         A10 = new javax.swing.JButton();
         A11 = new javax.swing.JButton();
         A12 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        next = new javax.swing.JButton();
         namebox = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        Leader = new javax.swing.JTextArea();
+        Leader2 = new javax.swing.JTextArea();
         jLabel5 = new javax.swing.JLabel();
+        LevelBox = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        Leader = new javax.swing.JTextArea();
 
         jTextField1.setText("jTextField1");
 
@@ -65,9 +91,11 @@ public class finalexamproject extends javax.swing.JFrame {
         jLabel1.setText("                                      It Gets Harder");
         jLabel1.setOpaque(true);
 
+        Q1.setForeground(new java.awt.Color(0, 0, 255));
         Q1.setText("In What Year's did the French and Indian Start and End?");
         Q1.setOpaque(true);
 
+        A1.setForeground(new java.awt.Color(0, 0, 255));
         A1.setText("1755 /1764");
         A1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +103,7 @@ public class finalexamproject extends javax.swing.JFrame {
             }
         });
 
+        A2.setForeground(new java.awt.Color(0, 0, 255));
         A2.setText("1744 /1745");
         A2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,6 +111,7 @@ public class finalexamproject extends javax.swing.JFrame {
             }
         });
 
+        A3.setForeground(new java.awt.Color(0, 0, 255));
         A3.setText("1754 /1763");
         A3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,6 +119,7 @@ public class finalexamproject extends javax.swing.JFrame {
             }
         });
 
+        A4.setForeground(new java.awt.Color(0, 0, 255));
         A4.setText("1758 /1769");
         A4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,9 +127,11 @@ public class finalexamproject extends javax.swing.JFrame {
             }
         });
 
+        Q2.setForeground(new java.awt.Color(0, 0, 255));
         Q2.setText("In What Year did George Washington Die?");
         Q2.setOpaque(true);
 
+        A5.setForeground(new java.awt.Color(0, 0, 255));
         A5.setText("1805");
         A5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,6 +139,7 @@ public class finalexamproject extends javax.swing.JFrame {
             }
         });
 
+        A6.setForeground(new java.awt.Color(0, 0, 255));
         A6.setText("1806");
         A6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,6 +147,7 @@ public class finalexamproject extends javax.swing.JFrame {
             }
         });
 
+        A7.setForeground(new java.awt.Color(0, 0, 255));
         A7.setText("1799");
         A7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,6 +155,7 @@ public class finalexamproject extends javax.swing.JFrame {
             }
         });
 
+        A8.setForeground(new java.awt.Color(0, 0, 255));
         A8.setText("1798");
         A8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,9 +163,11 @@ public class finalexamproject extends javax.swing.JFrame {
             }
         });
 
+        Q3.setForeground(new java.awt.Color(0, 0, 255));
         Q3.setText("In What Year did John Adams Die?");
         Q3.setOpaque(true);
 
+        A9.setForeground(new java.awt.Color(0, 0, 255));
         A9.setText("1823");
         A9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,6 +175,7 @@ public class finalexamproject extends javax.swing.JFrame {
             }
         });
 
+        A10.setForeground(new java.awt.Color(0, 0, 255));
         A10.setText("1824");
         A10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,6 +183,7 @@ public class finalexamproject extends javax.swing.JFrame {
             }
         });
 
+        A11.setForeground(new java.awt.Color(0, 0, 255));
         A11.setText("1825");
         A11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,6 +191,7 @@ public class finalexamproject extends javax.swing.JFrame {
             }
         });
 
+        A12.setForeground(new java.awt.Color(0, 0, 255));
         A12.setText("1826");
         A12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,126 +199,194 @@ public class finalexamproject extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Every Time your answer is wrong the level will start again but the points value will be cut in half each time you start again, there are 3 levels!!!");
-
-        jButton1.setFont(new java.awt.Font("Wide Latin", 0, 18)); // NOI18N
-        jButton1.setText("Next");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        next.setFont(new java.awt.Font("Wide Latin", 0, 18)); // NOI18N
+        next.setForeground(new java.awt.Color(0, 0, 255));
+        next.setText("Next");
+        next.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                nextActionPerformed(evt);
             }
         });
 
+        namebox.setForeground(new java.awt.Color(0, 0, 255));
         namebox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nameboxActionPerformed(evt);
             }
         });
 
+        jLabel4.setForeground(new java.awt.Color(0, 0, 255));
         jLabel4.setText("Name here:");
+
+        jScrollPane1.setForeground(new java.awt.Color(0, 0, 255));
+
+        Leader2.setColumns(20);
+        Leader2.setRows(5);
+        jScrollPane1.setViewportView(Leader2);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel5.setText("ScoreBoard:");
+
+        LevelBox.setFont(new java.awt.Font("Wide Latin", 0, 12)); // NOI18N
+        LevelBox.setForeground(new java.awt.Color(0, 0, 255));
+        LevelBox.setText("Level 1");
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel6.setText("Between 0 and 30 = Below Average");
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel7.setText("Between 31 and 45 =  Average");
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel8.setText("Between 46 and 57 =  Above Average");
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel9.setText("Between 58 and 60 = Genius");
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel10.setText("10 Levels , 3 Questions each ");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 0, 102));
+        jLabel2.setText("Your Score Is:");
 
         Leader.setColumns(20);
         Leader.setRows(5);
-        jScrollPane1.setViewportView(Leader);
-
-        jLabel5.setText("Leaderboard:");
+        jScrollPane2.setViewportView(Leader);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 818, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(A12, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(A11, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(A10, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(A4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(A1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(A3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(A2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Q2, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Q3, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(A5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(A6, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(A8, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(A7, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Q1, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(A9, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(namebox, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addComponent(A4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(A3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(A2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Q2, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(A5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(A6, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(A8, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(A12, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(A11, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(A10, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Q3, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(A7, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(A9, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(293, 293, 293)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addGap(285, 285, 285)
+                                    .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(129, 129, 129)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(238, 238, 238)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE)
+                                    .addComponent(jScrollPane2))
+                                .addGap(82, 82, 82))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(namebox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(448, 448, 448)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(A1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 818, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Q1, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LevelBox, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel10)
+                .addGap(17, 17, 17)
+                .addComponent(jLabel3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(Q1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel3)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(namebox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(36, 36, 36)
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(33, 33, 33)
-                                .addComponent(A1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(A2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(3, 3, 3)
-                                .addComponent(A3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(A4, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(12, 12, 12)
-                                .addComponent(Q2)
-                                .addGap(8, 8, 8)
-                                .addComponent(A5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(A6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(A7, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(A8, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Q3)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(namebox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(LevelBox)
+                        .addGap(17, 17, 17)
+                        .addComponent(Q1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(A1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(1, 1, 1)
+                        .addComponent(A2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(A3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(3, 3, 3)
+                        .addComponent(A4, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Q2)
+                        .addGap(5, 5, 5)
+                        .addComponent(A5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(A6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(A7, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(A8, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Q3)
+                        .addGap(7, 7, 7)
                         .addComponent(A9, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(4, 4, 4)
                         .addComponent(A10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(A11, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(A12, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(A12, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(74, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23)
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel7)
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel9)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16)
+                        .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
@@ -316,7 +425,7 @@ public class finalexamproject extends javax.swing.JFrame {
 
     private void A7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A7ActionPerformed
         Q2.setBackground(Color.green);
-        Score += 1 ;
+        Score += 2 ;
     }//GEN-LAST:event_A7ActionPerformed
 
     private void A8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A8ActionPerformed
@@ -341,10 +450,10 @@ public class finalexamproject extends javax.swing.JFrame {
 
     private void A12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A12ActionPerformed
         Q3.setBackground(Color.green);
-        Score += 1 ;
+        Score += 3 ;
     }//GEN-LAST:event_A12ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextActionPerformed
         
          level++;
         
@@ -353,6 +462,7 @@ public class finalexamproject extends javax.swing.JFrame {
         if ( level == 2){
         Q1.setText("In what year did the war of 1812 end?");
         Q1.setBackground(new Color(240,240,240));
+        LevelBox.setText("Level 2");
         
         
         A1.setText("1812");
@@ -381,7 +491,7 @@ public class finalexamproject extends javax.swing.JFrame {
         if (level == 3){
         Q1.setText("In what year did the wars of the Rose's end?");
         Q1.setBackground(new Color(240,240,240));
-        
+        LevelBox.setText("Level 3");
         
         A1.setText("1483");
         A2.setText("1484");
@@ -406,13 +516,208 @@ public class finalexamproject extends javax.swing.JFrame {
        
     
         }
+        if (level == 4){
+        Q1.setText("What Year did Thomas Jefferson Die?");
+        Q1.setBackground(new Color(240,240,240));
+        LevelBox.setText("Level 4");
+        A1.setText("1820");
+        A2.setText("1823");
+        A3.setText("1826");
+        A4.setText("1829");
+        
+        Q2.setText("What Year did Andrew Jackson Die?");
+        Q2.setBackground(new Color(240,240,240));
+        A5.setText("1843");
+        A6.setText("1844");
+        A7.setText("1845");
+        A8.setText("1846");
+        
+        Q3.setText("What Year did John Quincy Adams Die?");
+        Q3.setBackground(new Color(240,240,240));
+        A9.setText("1845");
+        A10.setText("1846");
+        A11.setText("1847");
+        A12.setText("1848");
+       
     
-      if(level == 4){
+        }
+        if (level == 5){
+        Q1.setText("What Year Did Andrew Johnson Die?");
+        Q1.setBackground(new Color(240,240,240));
+        LevelBox.setText("Level 5");
+        A1.setText("1873");
+        A2.setText("1874");
+        A3.setText("1875");
+        A4.setText("1876");
+        
+        Q2.setText("WHat Year did Martin Van Buren Die?");
+        Q2.setBackground(new Color(240,240,240));
+        A5.setText("1860");
+        A6.setText("1861");
+        A7.setText("1862");
+        A8.setText("1863");
+        
+        Q3.setText("What Year did Abraham Lincoln Die?");
+        Q3.setBackground(new Color(240,240,240));
+        A9.setText("1862");
+        A10.setText("1863");
+        A11.setText("1864");
+        A12.setText("1865");
+       
+    
+        }
+        if (level == 6){
+        Q1.setText("What Year Did Ulysses S. Grant Die?");
+        Q1.setBackground(new Color(240,240,240));
+        LevelBox.setText("Level 6");
+        A1.setText("1883");
+        A2.setText("1884");
+        A3.setText("1885");
+        A4.setText("1886");
+        
+        Q2.setText("What Year Did John Tyler Die?");
+        Q2.setBackground(new Color(240,240,240));
+        A5.setText("1860");
+        A6.setText("1861");
+        A7.setText("1862");
+        A8.setText("1863");
+        
+        Q3.setText("What Year Did Ben Franklin Die?");
+        Q3.setBackground(new Color(240,240,240));
+        A9.setText("1787");
+        A10.setText("1788");
+        A11.setText("1789");
+        A12.setText("1790");
+       
+    
+        }
+        if (level == 7){
+        Q1.setText("What Year Did Ronald Reagan Die?");
+        Q1.setBackground(new Color(240,240,240));
+        LevelBox.setText("Level 7");
+        A1.setText("1999");
+        A2.setText("2000");
+        A3.setText("2004");
+        A4.setText("2005");
+        
+        Q2.setText("What Year Did EisenHower Die?");
+        Q2.setBackground(new Color(240,240,240));
+        A5.setText("1967");
+        A6.setText("1968");
+        A7.setText("1969");
+        A8.setText("1970");
+        
+        Q3.setText("What Year Did Robert E. Lee Die?");
+        Q3.setBackground(new Color(240,240,240));
+        A9.setText("1867");
+        A10.setText("1868");
+        A11.setText("1869");
+        A12.setText("1870");
+       
+    
+        }
+        if (level == 8){
+        Q1.setText("When Did The Battle of The Bulge Start?");
+        Q1.setBackground(new Color(240,240,240));
+        LevelBox.setText("Level 8");
+        A1.setText("1942");
+        A2.setText("1943");
+        A3.setText("1944");
+        A4.setText("1945");
+        
+        Q2.setText("When Did The Battle of The Bulge end?");
+        Q2.setBackground(new Color(240,240,240));
+        A5.setText("1943");
+        A6.setText("1944");
+        A7.setText("1945");
+        A8.setText("1946");
+        
+        Q3.setText("When Did The Battle of Berlin Start");
+        Q3.setBackground(new Color(240,240,240));
+        A9.setText("1942");
+        A10.setText("1943");
+        A11.setText("1944");
+        A12.setText("1945");
+       
+    
+        }
+        if (level == 9){
+        Q1.setText("what year did the Titanic sink?");
+        Q1.setBackground(new Color(240,240,240));
+        LevelBox.setText("Level 9");
+        A1.setText("1910");
+        A2.setText("1911");
+        A3.setText("1912");
+        A4.setText("1913");
+        
+        Q2.setText("What Year did Teh Lusitania Sink?");
+        Q2.setBackground(new Color(240,240,240));
+        A5.setText("1913");
+        A6.setText("1914");
+        A7.setText("1915");
+        A8.setText("1916");
+        
+        Q3.setText("When Was the first Atomic Bomb Dropped?");
+        Q3.setBackground(new Color(240,240,240));
+        A9.setText("1942");
+        A10.setText("1943");
+        A11.setText("1944");
+        A12.setText("1945");
+       
+    
+        }
+        if (level == 10){
+        Q1.setText("When Was the USSR Found?");
+        Q1.setBackground(new Color(240,240,240));
+        LevelBox.setText("Level 10");
+        A1.setText("1920");
+        A2.setText("1921");
+        A3.setText("1922");
+        A4.setText("1923");
+        
+        Q2.setText("When Was the USSR Dissovled?");
+        Q2.setBackground(new Color(240,240,240));
+        A5.setText("1989");
+        A6.setText("1990");
+        A7.setText("1991");
+        A8.setText("1992");
+        
+        Q3.setText("When Did The Berlin Wall Fall?");
+        Q3.setBackground(new Color(240,240,240));
+        A9.setText("1987");
+        A10.setText("1988");
+        A11.setText("1989");
+        A12.setText("1990");
+       
+    
+        }
+
+    //Leader2.getText()+
+      if(level == 11){
       String name = (namebox.getText());
-      Leader.setText( name + ": " + Score); 
+      Leader2.setText(  name + ": " + Score);
+      Leader.setText( Leader.getText() + "\n" +Leader2.getText());
       
+      String pathname = "Leader.txt";
+    File file = new File(pathname);
+    PrintWriter output = null;
+    try
+    {
+       output = new PrintWriter(file);
+    }
+    catch (FileNotFoundException ex)
+    {
+       System.out.println("Cannot create " + pathname);
+       System.exit(1);  // quit the program
+    }
+    
+    output.print(Leader.getText());
+    output.close();
+    
+    
+
       }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_nextActionPerformed
 
     private void nameboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameboxActionPerformed
     
@@ -467,17 +772,25 @@ public class finalexamproject extends javax.swing.JFrame {
     private javax.swing.JButton A8;
     private javax.swing.JButton A9;
     private javax.swing.JTextArea Leader;
+    private javax.swing.JTextArea Leader2;
+    private javax.swing.JLabel LevelBox;
     private javax.swing.JLabel Q1;
     private javax.swing.JLabel Q2;
     private javax.swing.JLabel Q3;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField namebox;
+    private javax.swing.JButton next;
     // End of variables declaration//GEN-END:variables
 }
